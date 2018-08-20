@@ -19,6 +19,18 @@ wget https://raw.githubusercontent.com/nilmtk/nilmtk/master/environment.yml
 
 # 2. Creating nilmtk environment. Will download the necessary packages
 conda env create
+
+# For Windows, you will get hmmlearn error
+# "Failed building wheel for hmmlearn"
+
+# set an environment to nilmtk-env
+activate nilmtk-env
+
+# trying to install hmmlearn manually
+conda install -c omnia hmmlearn
+
+# Proceed ([yes]) for hmmlearn-0.3.0b downgrade numpy from 1.15.0 to 1.12.1
+
 # For Linux/OSX
 source activate nilmtk-env
 # For Windows
